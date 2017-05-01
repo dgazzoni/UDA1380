@@ -37,6 +37,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>CPAL\include FreeRTOS\include UDA1380;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>DEBUG=1;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization>O3</Optimization>
     </ClCompile>
     <Link>
       <AdditionalLinkerInputs>;%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
@@ -106,7 +107,9 @@
     <ClCompile Include="FreeRTOS\queue.c" />
     <ClCompile Include="FreeRTOS\tasks.c" />
     <ClCompile Include="FreeRTOS\timers.c" />
-    <ClCompile Include="main.c" />
+    <ClCompile Include="main.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">Og</Optimization>
+    </ClCompile>
     <ClCompile Include="system_stm32f4xx.c" />
     <ClCompile Include="UDA1380\uda1380.c" />
     <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_abs_f32.c" />

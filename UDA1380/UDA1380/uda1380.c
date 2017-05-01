@@ -6,6 +6,7 @@
 #include "task.h"
 #include "queue.h"
 #include "semphr.h"
+#include "ExtraMemories.h"
 
 #ifdef STACK_CHECK
 // stacks[0] = UDA1380_button_task
