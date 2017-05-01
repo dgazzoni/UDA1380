@@ -244,7 +244,7 @@ void erro_catastrofico(const char* str)
 	GPIO_InitTypeDef GPIO_InitStructure;
 
 	if (CoreDebug->DHCSR & CoreDebug_DHCSR_C_DEBUGEN_Msk)
-		printf(str);
+		puts(str);
 
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
 
@@ -403,7 +403,7 @@ static void UDA1380_error_task(void* pvParameters)
 #endif
 
 	if (CoreDebug->DHCSR & CoreDebug_DHCSR_C_DEBUGEN_Msk)
-		printf(erro);
+		puts(erro);
 
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
 

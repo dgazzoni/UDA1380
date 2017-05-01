@@ -1,7 +1,7 @@
 #include <math.h>
 #include "uda1380.h"
 #include "arm_math.h"
-
+#include "ExtraMemories.h"
 
 // Os parametros abaixo estao nos valores tipicos para otimizar
 // tempo de processamento e tolerar processamentos mais longos
@@ -26,9 +26,13 @@ void processamento(void)
 	}
 }
 
+void __attribute__((constructor)) CCMRAM_Init();
+
 int main(void)
 {
 	UDA1380_InitTypeDef UDA1380_InitStructure;
+
+	CCMRAM_Init();
 
 	UDA1380_StructInit(&UDA1380_InitStructure);
 	UDA1380_InitStructure.UDA1380_Queue_Length = QUEUE_LEN;

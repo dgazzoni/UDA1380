@@ -23,6 +23,7 @@
         <string>USE_STDPERIPH_DRIVER</string>
         <string>__FPU_PRESENT</string>
         <string>USE_FREERTOS</string>
+        <string>HSE_VALUE=8000000</string>
       </PreprocessorMacros>
       <IncludeDirectories>
         <string>.</string>
@@ -265,7 +266,7 @@
     <Entries>
       <KeyValue>
         <Key>com.sysprogs.efp.semihosting.buffer_size</Key>
-        <Value>128</Value>
+        <Value>256</Value>
       </KeyValue>
       <KeyValue>
         <Key>com.sysprogs.efp.semihosting.stdio</Key>
