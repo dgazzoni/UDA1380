@@ -1,38 +1,306 @@
 <?xml version="1.0"?>
 <EmbeddedProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
-  <BspID>com.sysprogs.arm.stm32</BspID>
-  <BspVersion>4.2</BspVersion>
+  <BspID>com.visualgdb.bsp.in-place</BspID>
+  <BspVersion>1.0</BspVersion>
   <McuID>STM32F407VG</McuID>
-  <MCUDefinitionFile>STM32F4xxxx/DeviceDefinitions/stm32f407xx.xml</MCUDefinitionFile>
+  <BSPSubdirectory>BSP</BSPSubdirectory>
+  <MCUDefinitionFile>STM32F4xxxx\DeviceDefinitions\stm32f407xx.xml</MCUDefinitionFile>
   <MCUProperties>
-    <Entries>
-      <KeyValue>
-        <Key>com.sysprogs.bspoptions.primary_memory</Key>
-        <Value>flash</Value>
-      </KeyValue>
-      <KeyValue>
-        <Key>com.sysprogs.bspoptions.arm.floatmode</Key>
-        <Value>-mfloat-abi=soft</Value>
-      </KeyValue>
-      <KeyValue>
-        <Key>com.sysprogs.toolchainoptions.arm.libctype</Key>
-        <Value>--specs=nano.specs</Value>
-      </KeyValue>
-      <KeyValue>
-        <Key>com.sysprogs.toolchainoptions.arm.libnosys</Key>
-        <Value>--specs=nosys.specs</Value>
-      </KeyValue>
-    </Entries>
+    <Entries />
   </MCUProperties>
   <BSPSourceFolderName>Device-specific files</BSPSourceFolderName>
+  <InPlaceMCU>
+    <ID>STM32F407VG</ID>
+    <UserFriendlyName>STM32F407VG</UserFriendlyName>
+    <CompilationFlags>
+      <PreprocessorMacros>
+        <string>ARM_MATH_CM4</string>
+        <string>STM32F407VG</string>
+        <string>flash_layout</string>
+        <string>STM32F40_41xxx</string>
+        <string>STM32F4XX</string>
+        <string>USE_STDPERIPH_DRIVER</string>
+        <string>__FPU_PRESENT</string>
+        <string>USE_FREERTOS</string>
+      </PreprocessorMacros>
+      <IncludeDirectories>
+        <string>.</string>
+        <string>BSP/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc</string>
+        <string>BSP/STM32F4xxxx/CMSIS_StdPeriph/Device/ST/STM32F4xx/Include</string>
+        <string>BSP/STM32F4xxxx/CMSIS_StdPeriph/Include</string>
+        <string>BSP/STM32F4xxxx/CMSIS_StdPeriph/RTOS/Template</string>
+        <string>CPAL/include</string>
+        <string>FreeRTOS/include</string>
+        <string>UDA1380</string>
+      </IncludeDirectories>
+      <CFLAGS />
+      <CXXFLAGS />
+      <LDFLAGS>--specs=nano.specs --specs=nosys.specs</LDFLAGS>
+      <ASFLAGS>-mfpu=fpv4-sp-d16</ASFLAGS>
+      <LinkerScript>STM32F407VG_flash.lds</LinkerScript>
+      <COMMONFLAGS>-mcpu=cortex-m4 -mthumb -mfloat-abi=hard</COMMONFLAGS>
+      <EnableLinkerGroups>true</EnableLinkerGroups>
+    </CompilationFlags>
+    <AdditionalSourceFiles>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/StartupFiles/startup_stm32f407xx.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/misc.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_adc.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_can.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cec.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_crc.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cryp.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cryp_aes.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cryp_des.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cryp_tdes.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dac.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dbgmcu.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dcmi.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dfsdm.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma2d.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dsi.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_exti.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_flash.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_flash_ramfunc.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_fmpi2c.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_fsmc.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_hash.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_hash_md5.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_hash_sha1.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_iwdg.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_lptim.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_ltdc.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_pwr.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_qspi.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rng.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rtc.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_sai.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_sdio.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_spdifrx.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_spi.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_syscfg.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.c</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_wwdg.c</string>
+    </AdditionalSourceFiles>
+    <AdditionalHeaderFiles>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/misc.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_adc.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_can.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_cec.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_crc.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_cryp.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dac.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dbgmcu.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dcmi.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dfsdm.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dma.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dma2d.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dsi.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_exti.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_flash.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_flash_ramfunc.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fmc.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fmpi2c.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_gpio.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_hash.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_i2c.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_iwdg.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_lptim.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_ltdc.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_pwr.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_qspi.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rcc.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rng.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rtc.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_sai.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_sdio.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_spdifrx.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_spi.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_syscfg.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_tim.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_usart.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/CMSIS_StdPeriph/Device/ST/STM32F4xx/Include/stm32f4xx.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/CMSIS_StdPeriph/Device/ST/STM32F4xx/Include/system_stm32f4xx.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/CMSIS_StdPeriph/Include/arm_common_tables.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/CMSIS_StdPeriph/Include/arm_const_structs.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/CMSIS_StdPeriph/Include/arm_math.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/CMSIS_StdPeriph/Include/core_cm0.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/CMSIS_StdPeriph/Include/core_cm0plus.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/CMSIS_StdPeriph/Include/core_cm3.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/CMSIS_StdPeriph/Include/core_cm4.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/CMSIS_StdPeriph/Include/core_cm7.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/CMSIS_StdPeriph/Include/core_cmFunc.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/CMSIS_StdPeriph/Include/core_cmInstr.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/CMSIS_StdPeriph/Include/core_cmSimd.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/CMSIS_StdPeriph/Include/core_sc000.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/CMSIS_StdPeriph/Include/core_sc300.h</string>
+      <string>$$SYS:BSP_ROOT$$/STM32F4xxxx/CMSIS_StdPeriph/RTOS/Template/cmsis_os.h</string>
+    </AdditionalHeaderFiles>
+    <AdditionalSystemVars>
+      <SysVarEntry>
+        <Key>com.sysprogs.bspoptions.arm.core</Key>
+        <Value>M4</Value>
+      </SysVarEntry>
+      <SysVarEntry>
+        <Key>com.sysprogs.stm32.hal_header_prefix</Key>
+        <Value>stm32f4xx</Value>
+      </SysVarEntry>
+      <SysVarEntry>
+        <Key>com.sysprogs.bspoptions.stm32.hal_system_file</Key>
+        <Value>STM32F4xxxx/CMSIS_HAL/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c</Value>
+      </SysVarEntry>
+      <SysVarEntry>
+        <Key>com.sysprogs.bspoptions.stm32.hal_config_template_file</Key>
+        <Value>STM32F4xxxx/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_conf_template.h</Value>
+      </SysVarEntry>
+      <SysVarEntry>
+        <Key>com.sysprogs.stm32.hal_device_family</Key>
+        <Value>STM32F407xx</Value>
+      </SysVarEntry>
+      <SysVarEntry>
+        <Key>com.sysprogs.stm32.legacy_device_family</Key>
+        <Value>STM32F40_41xxx</Value>
+      </SysVarEntry>
+    </AdditionalSystemVars>
+    <ConfigurableProperties>
+      <PropertyGroups>
+        <PropertyGroup>
+          <Properties>
+            <PropertyEntry xsi:type="Enumerated">
+              <Name>Execute from</Name>
+              <UniqueID>com.sysprogs.bspoptions.primary_memory</UniqueID>
+              <OmitPrefixIfEmpty>false</OmitPrefixIfEmpty>
+              <SuggestionList>
+                <Suggestion>
+                  <UserFriendlyName>FLASH</UserFriendlyName>
+                  <InternalValue>flash</InternalValue>
+                </Suggestion>
+                <Suggestion>
+                  <UserFriendlyName>SRAM</UserFriendlyName>
+                  <InternalValue>sram</InternalValue>
+                </Suggestion>
+              </SuggestionList>
+              <DefaultEntryIndex>0</DefaultEntryIndex>
+              <AllowFreeEntry>false</AllowFreeEntry>
+            </PropertyEntry>
+            <PropertyEntry xsi:type="Enumerated">
+              <Name>Floating point support</Name>
+              <UniqueID>com.sysprogs.bspoptions.arm.floatmode</UniqueID>
+              <OmitPrefixIfEmpty>false</OmitPrefixIfEmpty>
+              <SuggestionList>
+                <Suggestion>
+                  <UserFriendlyName>Software</UserFriendlyName>
+                  <InternalValue>-mfloat-abi=soft</InternalValue>
+                </Suggestion>
+                <Suggestion>
+                  <UserFriendlyName>Hardware</UserFriendlyName>
+                  <InternalValue>-mfloat-abi=hard</InternalValue>
+                </Suggestion>
+                <Suggestion>
+                  <UserFriendlyName>Unspecified</UserFriendlyName>
+                  <InternalValue />
+                </Suggestion>
+              </SuggestionList>
+              <DefaultEntryIndex>0</DefaultEntryIndex>
+              <AllowFreeEntry>false</AllowFreeEntry>
+            </PropertyEntry>
+            <PropertyEntry xsi:type="Enumerated">
+              <Name>C Library Type</Name>
+              <UniqueID>com.sysprogs.toolchainoptions.arm.libctype</UniqueID>
+              <OmitPrefixIfEmpty>false</OmitPrefixIfEmpty>
+              <SuggestionList>
+                <Suggestion>
+                  <UserFriendlyName>Default</UserFriendlyName>
+                  <InternalValue />
+                </Suggestion>
+                <Suggestion>
+                  <UserFriendlyName>Newlib-nano</UserFriendlyName>
+                  <InternalValue>--specs=nano.specs</InternalValue>
+                </Suggestion>
+                <Suggestion>
+                  <UserFriendlyName>Newlib-nano with floating point support in printf()</UserFriendlyName>
+                  <InternalValue>--specs=nano.specs -u _printf_float</InternalValue>
+                </Suggestion>
+                <Suggestion>
+                  <UserFriendlyName>Newlib-nano with floating point support in printf() and scanf()</UserFriendlyName>
+                  <InternalValue>--specs=nano.specs -u _printf_float -u _scanf_float</InternalValue>
+                </Suggestion>
+              </SuggestionList>
+              <DefaultEntryIndex>1</DefaultEntryIndex>
+              <AllowFreeEntry>false</AllowFreeEntry>
+            </PropertyEntry>
+            <PropertyEntry xsi:type="Boolean">
+              <Name>Provide default stubs for system calls</Name>
+              <UniqueID>com.sysprogs.toolchainoptions.arm.libnosys</UniqueID>
+              <OmitPrefixIfEmpty>false</OmitPrefixIfEmpty>
+              <DefaultValue>false</DefaultValue>
+              <ValueForTrue>--specs=nosys.specs</ValueForTrue>
+            </PropertyEntry>
+          </Properties>
+          <CollapsedByDefault>false</CollapsedByDefault>
+        </PropertyGroup>
+      </PropertyGroups>
+    </ConfigurableProperties>
+    <HierarchicalPath>STM32\STM32F4</HierarchicalPath>
+    <FamilyID>STM32F4</FamilyID>
+    <FLASHSize>1048576</FLASHSize>
+    <RAMSize>131072</RAMSize>
+    <FLASHBase>134217728</FLASHBase>
+    <RAMBase>536870912</RAMBase>
+    <MCUDefinitionFile>STM32F4xxxx\DeviceDefinitions\stm32f407xx.xml</MCUDefinitionFile>
+    <AdditionalSourcesRequiredForTesting>false</AdditionalSourcesRequiredForTesting>
+  </InPlaceMCU>
   <MCUMakFile>stm32.mak</MCUMakFile>
   <ReferencedFrameworks>
-    <string>com.sysprogs.arm.stm32.f4_stdperiph</string>
+    <string>com.sysprogs.embedded.semihosting_and_profiler</string>
   </ReferencedFrameworks>
   <FrameworkProperties>
-    <Entries />
+    <Entries>
+      <KeyValue>
+        <Key>com.sysprogs.efp.semihosting.buffer_size</Key>
+        <Value>128</Value>
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.efp.semihosting.stdio</Key>
+        <Value>1</Value>
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.efp.semihosting.blocking_mode</Key>
+        <Value>1</Value>
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.efp.profiling.semihosting_driver</Key>
+        <Value>1</Value>
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.efp.profiling.counter</Key>
+        <Value />
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.efp.profiling.nosampling</Key>
+        <Value>0</Value>
+      </KeyValue>
+    </Entries>
   </FrameworkProperties>
+  <ExtraMemories>
+    <ExtraMemoryDefinition>
+      <Name>CCMRAM</Name>
+      <Address>268435456</Address>
+      <Size>65536</Size>
+      <Type>RAM</Type>
+      <ContainsText>true</ContainsText>
+      <ContainsData>true</ContainsData>
+      <ContainsBSS>true</ContainsBSS>
+    </ExtraMemoryDefinition>
+  </ExtraMemories>
+  <EditableLinkerScriptFile>STM32F407VG_flash.lds</EditableLinkerScriptFile>
   <TestFrameworkProperties>
     <Entries />
   </TestFrameworkProperties>

@@ -23,148 +23,1129 @@
     <Filter Include="Header files\Device-specific files">
       <UniqueIdentifier>{6a8cff91-0b73-4e51-ab3a-4adf33197b8c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source files\Device-specific files\StdPeriph">
-      <UniqueIdentifier>{7db9367f-4517-4cc5-a158-90c375526aca}</UniqueIdentifier>
+    <Filter Include="Source files\UDA1380">
+      <UniqueIdentifier>{c079b890-61ac-439d-944c-0fa665650df1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header files\Device-specific files\StdPeriph">
-      <UniqueIdentifier>{fe7914c7-da0a-455e-8321-1210d87deb91}</UniqueIdentifier>
+    <Filter Include="Header files\UDA1380">
+      <UniqueIdentifier>{e35fef93-11cc-45f9-b83d-71e5f2755392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\UDA1380\CPAL">
+      <UniqueIdentifier>{c2d39885-c480-413c-9887-17fb568f1d85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\UDA1380\CPAL">
+      <UniqueIdentifier>{ce04d7dd-1557-477b-a8cd-927387b651e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\UDA1380\CPAL\include">
+      <UniqueIdentifier>{5b2afd35-d1d3-4883-8015-36810419c9bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\UDA1380\CPAL\include">
+      <UniqueIdentifier>{372bb1ad-2455-439e-928a-dbaa79696f78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\UDA1380\FreeRTOS">
+      <UniqueIdentifier>{52caa406-69b4-4c49-bffd-8d9f2e65ea1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\UDA1380\FreeRTOS">
+      <UniqueIdentifier>{c9154aa8-d58e-47ec-9f3e-26831d4e5048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\UDA1380\FreeRTOS\include">
+      <UniqueIdentifier>{e89fac21-9d9f-40ea-b25c-1a8d0e0c9375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\UDA1380\FreeRTOS\include">
+      <UniqueIdentifier>{fa229107-914d-48fc-83bd-d99c1410566c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\UDA1380\UDA1380">
+      <UniqueIdentifier>{a653d5ac-1374-4cf3-8952-b2507b7c328c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\UDA1380\UDA1380">
+      <UniqueIdentifier>{0453105c-f63e-4b3a-b9e4-5a22632fb095}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\UDA1380\CMSIS_DSP">
+      <UniqueIdentifier>{d5068dd3-4bf0-42fb-8eb7-ffe411771d1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\UDA1380\CMSIS_DSP\BasicMathFunctions">
+      <UniqueIdentifier>{9f362315-e162-479d-9c8f-994a9497c1f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\UDA1380\CMSIS_DSP\CommonTables">
+      <UniqueIdentifier>{6d778274-0468-41a1-9aba-be037d5496e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions">
+      <UniqueIdentifier>{2e10e5d3-29d9-40f5-8d37-598ad8b8f410}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\UDA1380\CMSIS_DSP\ControllerFunctions">
+      <UniqueIdentifier>{0c74c7f5-61bc-4971-aa34-d748a18d4af6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\UDA1380\CMSIS_DSP\FastMathFunctions">
+      <UniqueIdentifier>{7cbb489a-0576-4d3a-9395-3663bf0587bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\UDA1380\CMSIS_DSP\FilteringFunctions">
+      <UniqueIdentifier>{e7dab76b-51ba-4452-8b21-c3d77c7a2222}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\UDA1380\CMSIS_DSP\MatrixFunctions">
+      <UniqueIdentifier>{da7dc42a-dfd7-40ad-a7d1-dfc1fee464df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\UDA1380\CMSIS_DSP\StatisticsFunctions">
+      <UniqueIdentifier>{e1cbcbb5-8c7f-4b2c-88c9-9f042b5a9ef3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\UDA1380\CMSIS_DSP\SupportFunctions">
+      <UniqueIdentifier>{60cb5198-c413-4ffb-83d7-9337809717ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\UDA1380\CMSIS_DSP\TransformFunctions">
+      <UniqueIdentifier>{37f95874-c239-48c0-aef8-6ede99449540}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\Device-specific files\Semihosting/Profiler">
+      <UniqueIdentifier>{82aa7cac-a71a-4c90-8a38-66c9c827daa7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\Device-specific files\Semihosting/Profiler">
+      <UniqueIdentifier>{0323d56e-152c-481f-97b6-e762e2c8bc30}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LEDBlink.c">
-      <Filter>Source files</Filter>
-    </ClCompile>
     <ClCompile Include="system_stm32f4xx.c">
       <Filter>Source files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\StartupFiles\startup_stm32f407xx.c">
+    <ClCompile Include="main.c">
+      <Filter>Source files\UDA1380</Filter>
+    </ClCompile>
+    <ClCompile Include="CPAL\cpal_hal.c">
+      <Filter>Source files\UDA1380\CPAL</Filter>
+    </ClCompile>
+    <ClCompile Include="CPAL\cpal_i2c.c">
+      <Filter>Source files\UDA1380\CPAL</Filter>
+    </ClCompile>
+    <ClCompile Include="CPAL\cpal_i2c_hal_stm32f4xx.c">
+      <Filter>Source files\UDA1380\CPAL</Filter>
+    </ClCompile>
+    <ClCompile Include="CPAL\cpal_usercallback_template.c">
+      <Filter>Source files\UDA1380\CPAL</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeRTOS\croutine.c">
+      <Filter>Source files\UDA1380\FreeRTOS</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeRTOS\event_groups.c">
+      <Filter>Source files\UDA1380\FreeRTOS</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeRTOS\heap_4.c">
+      <Filter>Source files\UDA1380\FreeRTOS</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeRTOS\list.c">
+      <Filter>Source files\UDA1380\FreeRTOS</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeRTOS\port.c">
+      <Filter>Source files\UDA1380\FreeRTOS</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeRTOS\queue.c">
+      <Filter>Source files\UDA1380\FreeRTOS</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeRTOS\tasks.c">
+      <Filter>Source files\UDA1380\FreeRTOS</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeRTOS\timers.c">
+      <Filter>Source files\UDA1380\FreeRTOS</Filter>
+    </ClCompile>
+    <ClCompile Include="UDA1380\uda1380.c">
+      <Filter>Source files\UDA1380\UDA1380</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>Source files\UDA1380</Filter>
+    </ClCompile>
+    <ClCompile Include="system_stm32f4xx.c">
+      <Filter>Source files\UDA1380</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_abs_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_abs_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_abs_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_abs_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_add_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_add_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_add_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_add_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_dot_prod_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_dot_prod_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_dot_prod_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_dot_prod_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_mult_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_mult_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_mult_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_mult_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_negate_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_negate_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_negate_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_negate_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_offset_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_offset_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_offset_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_offset_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_scale_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_scale_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_scale_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_scale_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_shift_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_shift_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_shift_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_sub_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_sub_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_sub_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_sub_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\BasicMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\CommonTables\arm_common_tables.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\CommonTables</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\CommonTables\arm_const_structs.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\CommonTables</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ComplexMathFunctions\arm_cmplx_conj_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ComplexMathFunctions\arm_cmplx_conj_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ComplexMathFunctions\arm_cmplx_conj_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ComplexMathFunctions\arm_cmplx_dot_prod_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ComplexMathFunctions\arm_cmplx_dot_prod_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ComplexMathFunctions\arm_cmplx_dot_prod_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ComplexMathFunctions\arm_cmplx_mag_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ComplexMathFunctions\arm_cmplx_mag_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ComplexMathFunctions\arm_cmplx_mag_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ComplexMathFunctions\arm_cmplx_mag_squared_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ComplexMathFunctions\arm_cmplx_mag_squared_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ComplexMathFunctions\arm_cmplx_mag_squared_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ComplexMathFunctions\arm_cmplx_mult_cmplx_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ComplexMathFunctions\arm_cmplx_mult_cmplx_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ComplexMathFunctions\arm_cmplx_mult_cmplx_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ComplexMathFunctions\arm_cmplx_mult_real_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ComplexMathFunctions\arm_cmplx_mult_real_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ComplexMathFunctions\arm_cmplx_mult_real_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ComplexMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ControllerFunctions\arm_pid_init_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ControllerFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ControllerFunctions\arm_pid_init_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ControllerFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ControllerFunctions\arm_pid_init_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ControllerFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ControllerFunctions\arm_pid_reset_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ControllerFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ControllerFunctions\arm_pid_reset_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ControllerFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ControllerFunctions\arm_pid_reset_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ControllerFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ControllerFunctions\arm_sin_cos_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ControllerFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\ControllerFunctions\arm_sin_cos_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\ControllerFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FastMathFunctions\arm_cos_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FastMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FastMathFunctions\arm_cos_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FastMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FastMathFunctions\arm_cos_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FastMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FastMathFunctions\arm_sin_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FastMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FastMathFunctions\arm_sin_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FastMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FastMathFunctions\arm_sin_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FastMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FastMathFunctions\arm_sqrt_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FastMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FastMathFunctions\arm_sqrt_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FastMathFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_biquad_cascade_df1_32x64_init_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_biquad_cascade_df1_32x64_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_biquad_cascade_df1_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_biquad_cascade_df1_fast_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_biquad_cascade_df1_fast_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_biquad_cascade_df1_init_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_biquad_cascade_df1_init_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_biquad_cascade_df1_init_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_biquad_cascade_df1_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_biquad_cascade_df1_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_biquad_cascade_df2T_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_biquad_cascade_df2T_f64.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_biquad_cascade_df2T_init_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_biquad_cascade_df2T_init_f64.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_biquad_cascade_stereo_df2T_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_biquad_cascade_stereo_df2T_init_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_conv_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_conv_fast_opt_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_conv_fast_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_conv_fast_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_conv_opt_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_conv_opt_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_conv_partial_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_conv_partial_fast_opt_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_conv_partial_fast_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_conv_partial_fast_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_conv_partial_opt_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_conv_partial_opt_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_conv_partial_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_conv_partial_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_conv_partial_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_conv_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_conv_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_conv_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_correlate_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_correlate_fast_opt_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_correlate_fast_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_correlate_fast_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_correlate_opt_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_correlate_opt_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_correlate_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_correlate_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_correlate_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_decimate_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_decimate_fast_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_decimate_fast_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_decimate_init_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_decimate_init_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_decimate_init_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_decimate_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_decimate_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_fast_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_fast_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_init_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_init_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_init_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_init_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_interpolate_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_interpolate_init_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_interpolate_init_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_interpolate_init_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_interpolate_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_interpolate_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_lattice_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_lattice_init_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_lattice_init_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_lattice_init_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_lattice_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_lattice_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_sparse_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_sparse_init_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_sparse_init_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_sparse_init_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_sparse_init_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_sparse_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_sparse_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_fir_sparse_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_iir_lattice_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_iir_lattice_init_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_iir_lattice_init_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_iir_lattice_init_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_iir_lattice_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_iir_lattice_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_lms_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_lms_init_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_lms_init_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_lms_init_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_lms_norm_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_lms_norm_init_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_lms_norm_init_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_lms_norm_init_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_lms_norm_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_lms_norm_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_lms_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\FilteringFunctions\arm_lms_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\FilteringFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_add_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_add_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_add_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_cmplx_mult_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_cmplx_mult_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_cmplx_mult_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_init_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_init_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_init_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_inverse_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_inverse_f64.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_mult_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_mult_fast_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_mult_fast_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_mult_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_mult_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_scale_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_scale_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_scale_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_sub_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_sub_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_sub_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_trans_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_trans_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\MatrixFunctions\arm_mat_trans_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\MatrixFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_max_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_max_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_max_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_max_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_mean_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_mean_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_mean_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_mean_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_min_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_min_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_min_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_min_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_power_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_power_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_power_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_power_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_rms_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_rms_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_rms_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_std_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_std_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_std_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_var_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_var_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\StatisticsFunctions\arm_var_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\StatisticsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_copy_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_copy_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_copy_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_copy_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_fill_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_fill_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_fill_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_fill_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_float_to_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_float_to_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_float_to_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_q15_to_float.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_q15_to_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_q15_to_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_q31_to_float.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_q31_to_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_q31_to_q7.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_q7_to_float.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_q7_to_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\SupportFunctions\arm_q7_to_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\SupportFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_bitreversal.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_cfft_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_cfft_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_cfft_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_cfft_radix2_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_cfft_radix2_init_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_cfft_radix2_init_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_cfft_radix2_init_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_cfft_radix2_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_cfft_radix2_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_cfft_radix4_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_cfft_radix4_init_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_cfft_radix4_init_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_cfft_radix4_init_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_cfft_radix4_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_cfft_radix4_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_cfft_radix8_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_dct4_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_dct4_init_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_dct4_init_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_dct4_init_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_dct4_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_dct4_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_rfft_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_rfft_fast_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_rfft_fast_init_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_rfft_init_f32.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_rfft_init_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_rfft_init_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_rfft_q15.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_rfft_q31.c">
+      <Filter>Source files\UDA1380\CMSIS_DSP\TransformFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CPAL\cpal_hal.c">
+      <Filter>Source files\UDA1380\CPAL</Filter>
+    </ClCompile>
+    <ClCompile Include="CPAL\cpal_i2c.c">
+      <Filter>Source files\UDA1380\CPAL</Filter>
+    </ClCompile>
+    <ClCompile Include="CPAL\cpal_i2c_hal_stm32f4xx.c">
+      <Filter>Source files\UDA1380\CPAL</Filter>
+    </ClCompile>
+    <ClCompile Include="CPAL\cpal_usercallback_template.c">
+      <Filter>Source files\UDA1380\CPAL</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeRTOS\croutine.c">
+      <Filter>Source files\UDA1380\FreeRTOS</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeRTOS\event_groups.c">
+      <Filter>Source files\UDA1380\FreeRTOS</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeRTOS\heap_4.c">
+      <Filter>Source files\UDA1380\FreeRTOS</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeRTOS\list.c">
+      <Filter>Source files\UDA1380\FreeRTOS</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeRTOS\port.c">
+      <Filter>Source files\UDA1380\FreeRTOS</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeRTOS\queue.c">
+      <Filter>Source files\UDA1380\FreeRTOS</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeRTOS\tasks.c">
+      <Filter>Source files\UDA1380\FreeRTOS</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeRTOS\timers.c">
+      <Filter>Source files\UDA1380\FreeRTOS</Filter>
+    </ClCompile>
+    <ClCompile Include="UDA1380\uda1380.c">
+      <Filter>Source files\UDA1380\UDA1380</Filter>
+    </ClCompile>
+    <ClCompile Include="BSP\STM32F4xxxx\StartupFiles\startup_stm32f407xx.c">
       <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\misc.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\misc.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_adc.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_adc.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_can.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_can.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cec.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cec.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_crc.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_crc.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_aes.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_aes.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_des.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_des.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_tdes.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_tdes.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dac.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dac.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dbgmcu.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dbgmcu.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dcmi.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dcmi.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dfsdm.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dfsdm.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma2d.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma2d.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dsi.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dsi.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash_ramfunc.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash_ramfunc.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fmpi2c.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fmpi2c.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_md5.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_md5.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_sha1.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_sha1.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_i2c.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_i2c.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_iwdg.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_iwdg.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_lptim.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_lptim.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_ltdc.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_ltdc.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_pwr.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_pwr.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_qspi.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_qspi.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rng.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rng.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rtc.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rtc.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sai.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sai.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sdio.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sdio.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spdifrx.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spdifrx.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c">
+      <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.c">
-      <Filter>Source files\Device-specific files\StdPeriph</Filter>
+    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\FastSemihosting.cpp">
+      <Filter>Source files\Device-specific files\Semihosting/Profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\SamplingProfiler.cpp">
+      <Filter>Source files\Device-specific files\Semihosting/Profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\InstrumentingProfiler.cpp">
+      <Filter>Source files\Device-specific files\Semihosting/Profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\ProfilerRTOS_FreeRTOS.c">
+      <Filter>Source files\Device-specific files\Semihosting/Profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtraMemories.c">
+      <Filter>Source files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -179,172 +1160,324 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\misc.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="CPAL\include\cpal.h">
+      <Filter>Header files\UDA1380\CPAL\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="CPAL\include\cpal_conf.h">
+      <Filter>Header files\UDA1380\CPAL\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="CPAL\include\cpal_i2c.h">
+      <Filter>Header files\UDA1380\CPAL\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cec.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="CPAL\include\cpal_i2c_hal_stm32f4xx.h">
+      <Filter>Header files\UDA1380\CPAL\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\croutine.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\deprecated_definitions.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\event_groups.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\FreeRTOS.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\FreeRTOSConfig.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dfsdm.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\list.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\mpu_prototypes.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma2d.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\mpu_wrappers.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dsi.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\portable.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\portmacro.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\projdefs.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash_ramfunc.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\queue.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fmc.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\semphr.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fmpi2c.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\StackMacros.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\task.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\timers.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="UDA1380\uda1380.h">
+      <Filter>Header files\UDA1380\UDA1380</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="CPAL\include\cpal.h">
+      <Filter>Header files\UDA1380\CPAL\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="CPAL\include\cpal_conf.h">
+      <Filter>Header files\UDA1380\CPAL\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_lptim.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="CPAL\include\cpal_i2c.h">
+      <Filter>Header files\UDA1380\CPAL\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_ltdc.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="CPAL\include\cpal_i2c_hal_stm32f4xx.h">
+      <Filter>Header files\UDA1380\CPAL\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\croutine.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_qspi.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\deprecated_definitions.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\event_groups.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\FreeRTOS.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\FreeRTOSConfig.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sai.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\list.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\mpu_prototypes.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spdifrx.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\mpu_wrappers.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\portable.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\portmacro.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\projdefs.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\queue.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\semphr.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_StdPeriph\Device\ST\STM32F4xx\Include\stm32f4xx.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\StackMacros.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_StdPeriph\Device\ST\STM32F4xx\Include\system_stm32f4xx.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\task.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_StdPeriph\Include\arm_common_tables.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="FreeRTOS\include\timers.h">
+      <Filter>Header files\UDA1380\FreeRTOS\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_StdPeriph\Include\arm_const_structs.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="UDA1380\uda1380.h">
+      <Filter>Header files\UDA1380\UDA1380</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_StdPeriph\Include\arm_math.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\misc.h">
+      <Filter>Header files\Device-specific files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm0.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h">
+      <Filter>Header files\Device-specific files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm0plus.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h">
+      <Filter>Header files\Device-specific files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm3.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cec.h">
+      <Filter>Header files\Device-specific files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm4.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h">
+      <Filter>Header files\Device-specific files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm7.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h">
+      <Filter>Header files\Device-specific files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cmFunc.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h">
+      <Filter>Header files\Device-specific files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cmInstr.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h">
+      <Filter>Header files\Device-specific files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cmSimd.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h">
+      <Filter>Header files\Device-specific files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_StdPeriph\Include\core_sc000.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dfsdm.h">
+      <Filter>Header files\Device-specific files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_StdPeriph\Include\core_sc300.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h">
+      <Filter>Header files\Device-specific files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_StdPeriph\RTOS\Template\cmsis_os.h">
-      <Filter>Header files\Device-specific files\StdPeriph</Filter>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma2d.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dsi.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash_ramfunc.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fmc.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fmpi2c.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_lptim.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_ltdc.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_qspi.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sai.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spdifrx.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Device\ST\STM32F4xx\Include\stm32f4xx.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Device\ST\STM32F4xx\Include\system_stm32f4xx.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\arm_common_tables.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\arm_const_structs.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\arm_math.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm0.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm0plus.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm3.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm4.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm7.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cmFunc.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cmInstr.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cmSimd.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_sc000.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_sc300.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\RTOS\Template\cmsis_os.h">
+      <Filter>Header files\Device-specific files</Filter>
+    </ClInclude>
+    <ClInclude Include="stm32f4xx_conf.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\SysprogsProfiler.h">
+      <Filter>Header files\Device-specific files\Semihosting/Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\SmallNumberCoder.h">
+      <Filter>Header files\Device-specific files\Semihosting/Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\SysprogsProfilerInterface.h">
+      <Filter>Header files\Device-specific files\Semihosting/Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\ProfilerFreeRTOSHooks.h">
+      <Filter>Header files\Device-specific files\Semihosting/Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\CustomRealTimeWatches.h">
+      <Filter>Header files\Device-specific files\Semihosting/Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtraMemories.h">
+      <Filter>Header files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="stm32.xml">
       <Filter>VisualGDB settings</Filter>
     </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <LinkerScript Include="STM32F407VG_flash.lds">
+      <Filter>Source files</Filter>
+    </LinkerScript>
   </ItemGroup>
 </Project>
