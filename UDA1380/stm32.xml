@@ -5,7 +5,7 @@
   <BspVersion>1.0</BspVersion>
   <McuID>STM32F407VG</McuID>
   <BSPSubdirectory>BSP</BSPSubdirectory>
-  <MCUDefinitionFile>STM32F4xxxx\DeviceDefinitions\stm32f407xx.xml</MCUDefinitionFile>
+  <MCUDefinitionFile>stm32f407xx.xml.gz</MCUDefinitionFile>
   <MCUProperties>
     <Entries />
   </MCUProperties>
@@ -24,6 +24,7 @@
         <string>__FPU_PRESENT</string>
         <string>USE_FREERTOS</string>
         <string>HSE_VALUE=8000000</string>
+        <string>DEBUG_DEFAULT_INTERRUPT_HANDLERS</string>
       </PreprocessorMacros>
       <IncludeDirectories>
         <string>.</string>
@@ -40,7 +41,7 @@
       <LDFLAGS>--specs=nano.specs --specs=nosys.specs</LDFLAGS>
       <ASFLAGS>-mfpu=fpv4-sp-d16</ASFLAGS>
       <LinkerScript>STM32F407VG_flash.lds</LinkerScript>
-      <COMMONFLAGS>-mcpu=cortex-m4 -mthumb -mfloat-abi=hard</COMMONFLAGS>
+      <COMMONFLAGS>-mcpu=cortex-m4 -mthumb -mthumb-interwork -mfloat-abi=hard</COMMONFLAGS>
       <EnableLinkerGroups>true</EnableLinkerGroups>
     </CompilationFlags>
     <AdditionalSourceFiles>
@@ -255,7 +256,7 @@
     <RAMSize>131072</RAMSize>
     <FLASHBase>134217728</FLASHBase>
     <RAMBase>536870912</RAMBase>
-    <MCUDefinitionFile>STM32F4xxxx\DeviceDefinitions\stm32f407xx.xml</MCUDefinitionFile>
+    <MCUDefinitionFile>stm32f407xx.xml.gz</MCUDefinitionFile>
     <AdditionalSourcesRequiredForTesting>false</AdditionalSourcesRequiredForTesting>
   </InPlaceMCU>
   <MCUMakFile>stm32.mak</MCUMakFile>

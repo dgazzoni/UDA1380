@@ -137,10 +137,10 @@ volatile int stacks[4] = { 0, 0, 0, 0 };
 #define UDA1380_REG22_SEL_MIC 		0x04
 
 // variaveis globais
-static int16_t *vet_in1, *vet_in2, *vet_out1, *vet_out2;
-static volatile int pos_send=0,pos_receive=0,pos_DMA_in=0,pos_DMA_out=0;
-static volatile int vet_in_DMA=1,vet_in_func=-1,vet_out_DMA=-1,vet_out_func=1;
-static int queue_length;
+static UDA1380_CCMRAM_BSS int16_t *vet_in1, *vet_in2, *vet_out1, *vet_out2;
+static UDA1380_CCMRAM_DATA volatile int pos_send=0,pos_receive=0,pos_DMA_in=0,pos_DMA_out=0;
+static UDA1380_CCMRAM_DATA volatile int vet_in_DMA = 1, vet_in_func = -1, vet_out_DMA = -1, vet_out_func = 1;
+static UDA1380_CCMRAM_BSS int queue_length;
 
 static const int matriz_sample_rate[][2] =
 {
@@ -212,17 +212,27 @@ static const int matriz_pll[][2] =
 	{ 271, 2 }, 	//UDA1380_ADC_11025_DAC_11025,
 };
 
-static FunctionalState ADC_StateFlag, DAC_StateFlag;
+static UDA1380_CCMRAM_BSS FunctionalState ADC_StateFlag, DAC_StateFlag;
 
 #ifdef BUTTON_PASSTHROUGH
-static SemaphoreHandle_t sem_button;
+static UDA1380_CCMRAM_BSS SemaphoreHandle_t sem_button;
 #endif
 
-static QueueHandle_t queue_erro;
-static CPAL_TransferTypeDef CPALTx_Structure, CPALRx_Structure;
-TaskHandle_t CPAL_timeout_task_handle;
-int CPAL_timeout_init = 0;
-static UDA1380_InitTypeDef UDA1380_InitStructure_global;
+static UDA1380_CCMRAM_BSS QueueHandle_t queue_erro;
+static UDA1380_CCMRAM_BSS CPAL_TransferTypeDef CPALTx_Structure, CPALRx_Structure;
+UDA1380_CCMRAM_BSS TaskHandle_t CPAL_timeout_task_handle;
+UDA1380_CCMRAM_BSS int CPAL_timeout_init = 0;
+static UDA1380_CCMRAM_BSS UDA1380_InitTypeDef UDA1380_InitStructure_global;
+
+UDA1380_CCMRAM_BSS StaticTask_t CPAL_timeout_task_buffer;
+UDA1380_CCMRAM_BSS StackType_t CPAL_timeout_task_stack[48];
+
+static UDA1380_CCMRAM_BSS StaticTask_t UDA1380_error_task_buffer, UDA1380_button_task_buffer, UDA1380_task_buffer;
+static UDA1380_CCMRAM_BSS StackType_t UDA1380_error_task_stack[64], UDA1380_button_task_stack[64], UDA1380_task_stack[2048];
+
+static UDA1380_CCMRAM_BSS StaticSemaphore_t sem_button_buffer;
+static UDA1380_CCMRAM_BSS StaticQueue_t queue_erro_static;
+static UDA1380_CCMRAM_BSS uint8_t queue_erro_storage_area[sizeof(char*)];
 
 // prototipos
 static void Delay(volatile int d);
@@ -260,6 +270,52 @@ void erro_catastrofico(const char* str)
 		GPIO_ResetBits(GPIOD,GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15);
 		Delay(5000000);
 	}
+}
+
+void vApplicationGetIdleTaskMemory(StaticTask_t **ppxIdleTaskTCBBuffer, StackType_t **ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize)
+{
+	/* If the buffers to be provided to the Idle task are declared inside this
+	function then they must be declared static - otherwise they will be allocated on
+	the stack and so not exists after this function exits. */
+	static UDA1380_CCMRAM_BSS StaticTask_t xIdleTaskTCB;
+	static UDA1380_CCMRAM_BSS StackType_t uxIdleTaskStack[configMINIMAL_STACK_SIZE];
+
+	/* Pass out a pointer to the StaticTask_t structure in which the Idle task's
+	state will be stored. */
+	*ppxIdleTaskTCBBuffer = &xIdleTaskTCB;
+
+	/* Pass out the array that will be used as the Idle task's stack. */
+	*ppxIdleTaskStackBuffer = uxIdleTaskStack;
+
+	/* Pass out the size of the array pointed to by *ppxIdleTaskStackBuffer.
+	Note that, as the array is necessarily of type StackType_t,
+	configMINIMAL_STACK_SIZE is specified in words, not bytes. */
+	*pulIdleTaskStackSize = configMINIMAL_STACK_SIZE;
+}
+/*-----------------------------------------------------------*/
+
+/* configUSE_STATIC_ALLOCATION and configUSE_TIMERS are both set to 1, so the
+application must provide an implementation of vApplicationGetTimerTaskMemory()
+to provide the memory that is used by the Timer service task. */
+void vApplicationGetTimerTaskMemory(StaticTask_t **ppxTimerTaskTCBBuffer, StackType_t **ppxTimerTaskStackBuffer, uint32_t *pulTimerTaskStackSize)
+{
+	/* If the buffers to be provided to the Timer task are declared inside this
+	function then they must be declared static - otherwise they will be allocated on
+	the stack and so not exists after this function exits. */
+	static UDA1380_CCMRAM_BSS StaticTask_t xTimerTaskTCB;
+	static UDA1380_CCMRAM_BSS StackType_t uxTimerTaskStack[configTIMER_TASK_STACK_DEPTH];
+
+	/* Pass out a pointer to the StaticTask_t structure in which the Timer
+	task's state will be stored. */
+	*ppxTimerTaskTCBBuffer = &xTimerTaskTCB;
+
+	/* Pass out the array that will be used as the Timer task's stack. */
+	*ppxTimerTaskStackBuffer = uxTimerTaskStack;
+
+	/* Pass out the size of the array pointed to by *ppxTimerTaskStackBuffer.
+	Note that, as the array is necessarily of type StackType_t,
+	configMINIMAL_STACK_SIZE is specified in words, not bytes. */
+	*pulTimerTaskStackSize = configTIMER_TASK_STACK_DEPTH;
 }
 
 void vApplicationStackOverflowHook(TaskHandle_t xTask, signed char *pcTaskName)
@@ -362,16 +418,16 @@ static void I2S_DMA_Rx_Config(UDA1380_InitTypeDef* UDA1380_InitStruct)
 void FreeRTOS_Init(void)
 {
 #ifdef BUTTON_PASSTHROUGH
-	sem_button = xSemaphoreCreateBinary();
+	sem_button = xSemaphoreCreateBinaryStatic(&sem_button_buffer);
 #endif
 
-	queue_erro = xQueueCreate( 1, sizeof( char* ) );
+	queue_erro = xQueueCreateStatic(1, sizeof( char* ), queue_erro_storage_area, &queue_erro_static);
 	// tratamento de erro
 
-	xTaskCreate(UDA1380_error_task, "Err", 64, NULL, configMAX_PRIORITIES - 1, NULL);
+	xTaskCreateStatic(UDA1380_error_task, "Err", 64, NULL, configMAX_PRIORITIES - 1, UDA1380_error_task_stack, &UDA1380_error_task_buffer);
 
 #ifdef BUTTON_PASSTHROUGH
-	xTaskCreate(UDA1380_button_task, "But", 64, NULL, 1, NULL);
+	xTaskCreateStatic(UDA1380_button_task, "But", 64, NULL, 1, UDA1380_button_task_stack, &UDA1380_button_task_buffer);
 #endif
 }
 
@@ -765,7 +821,7 @@ static void UDA1380_task(void* pvParameters)
 }
 
 #ifdef BUTTON_PASSTHROUGH
-static void UDA1380_button_task(void* pvParameters)
+__RAMFUNC static void UDA1380_button_task(void* pvParameters)
 {
 	uint8_t dado[2];
 	while(1)
@@ -797,7 +853,7 @@ static void UDA1380_button_task(void* pvParameters)
 #endif
 
 #ifdef BUTTON_PASSTHROUGH
-void EXTI0_IRQHandler(void)
+__RAMFUNC void EXTI0_IRQHandler(void)
 {
 	if(EXTI_GetITStatus(EXTI_Line0) != RESET)
 	{
@@ -809,7 +865,7 @@ void EXTI0_IRQHandler(void)
 }
 #endif
 
-void DMA1_Stream0_IRQHandler(void)
+__RAMFUNC void DMA1_Stream0_IRQHandler(void)
 {
 
 #ifdef TEST_DMA1_STREAM0
@@ -862,7 +918,7 @@ void DMA1_Stream0_IRQHandler(void)
 
 }
 
-void DMA1_Stream4_IRQHandler(void)
+__RAMFUNC void DMA1_Stream4_IRQHandler(void)
 {
 
 #ifdef TEST_DMA1_STREAM4
@@ -928,7 +984,7 @@ void UDA1380_Init(UDA1380_InitTypeDef* UDA1380_InitStruct)
 
 	FreeRTOS_Init();
 
-	xTaskCreate(UDA1380_task, "UDA", 256, &UDA1380_InitStructure_global, 1, NULL);
+	xTaskCreateStatic(UDA1380_task, "UDA", 2048, &UDA1380_InitStructure_global, 1, UDA1380_task_stack, &UDA1380_task_buffer);
 
 	vTaskStartScheduler();
 
@@ -957,7 +1013,7 @@ inline float fixed_point_to_float(int16_t fix)
 	return res;
 }
 
-void UDA1380_ReceiveSamples(int16_t samples_L[], int16_t samples_R[], int num_samples)
+__RAMFUNC void UDA1380_ReceiveSamples(int16_t samples_L[], int16_t samples_R[], int num_samples)
 {
 	int i;
 	int16_t* vet;
@@ -1079,7 +1135,7 @@ void UDA1380_ReceiveSamples(int16_t samples_L[], int16_t samples_R[], int num_sa
 
 }
 
-void UDA1380_ReceiveSamplesMono(int16_t samples[], int num_samples)
+__RAMFUNC void UDA1380_ReceiveSamplesMono(int16_t samples[], int num_samples)
 {
 	int i;
 	int16_t* vet;
@@ -1202,7 +1258,7 @@ void UDA1380_ReceiveSamplesMono(int16_t samples[], int num_samples)
 
 }
 
-void UDA1380_ReceiveSamplesFloat(float samples_L[], float samples_R[], int num_samples)
+__RAMFUNC void UDA1380_ReceiveSamplesFloat(float samples_L[], float samples_R[], int num_samples)
 {
 	int i;
 	int16_t* vet;
@@ -1324,7 +1380,7 @@ void UDA1380_ReceiveSamplesFloat(float samples_L[], float samples_R[], int num_s
 
 }
 
-void UDA1380_ReceiveSamplesFloatMono(float samples[], int num_samples)
+__RAMFUNC void UDA1380_ReceiveSamplesFloatMono(float samples[], int num_samples)
 {
 	int i;
 	int16_t* vet;
@@ -1446,7 +1502,7 @@ void UDA1380_ReceiveSamplesFloatMono(float samples[], int num_samples)
 
 }
 
-void UDA1380_SendSamples(const int16_t samples_L[], const int16_t samples_R[], int num_samples)
+__RAMFUNC void UDA1380_SendSamples(const int16_t samples_L[], const int16_t samples_R[], int num_samples)
 {
 	int i;
 	int16_t* vet;
@@ -1575,7 +1631,7 @@ void UDA1380_SendSamples(const int16_t samples_L[], const int16_t samples_R[], i
 
 }
 
-void UDA1380_SendSamplesMono(const int16_t samples[], int num_samples)
+__RAMFUNC void UDA1380_SendSamplesMono(const int16_t samples[], int num_samples)
 {
 	int i;
 	int16_t* vet;
@@ -1704,7 +1760,7 @@ void UDA1380_SendSamplesMono(const int16_t samples[], int num_samples)
 
 }
 
-void UDA1380_SendSamplesFloat(const float samples_L[], const float samples_R[], int num_samples)
+__RAMFUNC void UDA1380_SendSamplesFloat(const float samples_L[], const float samples_R[], int num_samples)
 {
 	int i;
 	int16_t* vet;
@@ -1833,7 +1889,7 @@ void UDA1380_SendSamplesFloat(const float samples_L[], const float samples_R[], 
 
 }
 
-void UDA1380_SendSamplesFloatMono(const float samples[], int num_samples)
+__RAMFUNC void UDA1380_SendSamplesFloatMono(const float samples[], int num_samples)
 {
 	int i;
 	int16_t* vet;

@@ -37,9 +37,11 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
+extern StaticTask_t CPAL_timeout_task_buffer;
+extern StackType_t CPAL_timeout_task_stack[48];
 extern TaskHandle_t CPAL_timeout_task_handle;
 extern int CPAL_timeout_init;
- void CPAL_timeout_task(void* pvParameters);
+void CPAL_timeout_task(void* pvParameters);
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
 
@@ -469,12 +471,12 @@ extern int CPAL_timeout_init;
                  */
 
 
-#define _CPAL_TIMEOUT_INIT()	if (!CPAL_timeout_init)                                                                                 \
-								{                                                                                                       \
-									xTaskCreate(CPAL_timeout_task, "CPA", 48, NULL, configMAX_PRIORITIES-1, &CPAL_timeout_task_handle); \
-									CPAL_timeout_init = 1;                                                                              \
-								}                                                                                                       \
-								else                                                                                                    \
+#define _CPAL_TIMEOUT_INIT()	if (!CPAL_timeout_init)                                                                                                                                           \
+								{                                                                                                                                                                 \
+									CPAL_timeout_task_handle = xTaskCreateStatic(CPAL_timeout_task, "CPA", 48, NULL, configMAX_PRIORITIES-1, CPAL_timeout_task_stack, &CPAL_timeout_task_buffer); \
+									CPAL_timeout_init = 1;                                                                                                                                        \
+								}                                                                                                                                                                 \
+								else                                                                                                                                                              \
 									vTaskResume(CPAL_timeout_task_handle);
                                        /*<! Configure and enable the systick timer
                                        to generate an interrupt when counter value

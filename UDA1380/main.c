@@ -14,10 +14,12 @@
 
 int16_t buf_in[QUEUE_LEN], buf_out[QUEUE_LEN];
 
-int16_t bufL[BLOCK_SIZE],bufR[BLOCK_SIZE];
+CCMRAM_BSS int16_t bufL[BLOCK_SIZE],bufR[BLOCK_SIZE];
 
-void processamento(void)
+__RAMFUNC void processamento(void)
 {
+	int cont;
+
 	while(1)
 	{
 		UDA1380_ReceiveSamples(bufL, bufR, BLOCK_SIZE);

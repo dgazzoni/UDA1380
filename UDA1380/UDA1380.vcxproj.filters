@@ -93,10 +93,10 @@
       <UniqueIdentifier>{37f95874-c239-48c0-aef8-6ede99449540}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source files\Device-specific files\Semihosting/Profiler">
-      <UniqueIdentifier>{82aa7cac-a71a-4c90-8a38-66c9c827daa7}</UniqueIdentifier>
+      <UniqueIdentifier>{7b70ad21-c604-4279-97d0-ed29c151881a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\Device-specific files\Semihosting/Profiler">
-      <UniqueIdentifier>{0323d56e-152c-481f-97b6-e762e2c8bc30}</UniqueIdentifier>
+      <UniqueIdentifier>{7c8f679b-e9c5-4c6c-bc2d-766c2811a56f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -122,9 +122,6 @@
       <Filter>Source files\UDA1380\FreeRTOS</Filter>
     </ClCompile>
     <ClCompile Include="FreeRTOS\event_groups.c">
-      <Filter>Source files\UDA1380\FreeRTOS</Filter>
-    </ClCompile>
-    <ClCompile Include="FreeRTOS\heap_4.c">
       <Filter>Source files\UDA1380\FreeRTOS</Filter>
     </ClCompile>
     <ClCompile Include="FreeRTOS\list.c">
@@ -1132,6 +1129,9 @@
     <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.c">
       <Filter>Source files\Device-specific files</Filter>
     </ClCompile>
+    <ClCompile Include="ExtraMemories.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\FastSemihosting.cpp">
       <Filter>Source files\Device-specific files\Semihosting/Profiler</Filter>
     </ClCompile>
@@ -1143,9 +1143,6 @@
     </ClCompile>
     <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\ProfilerRTOS_FreeRTOS.c">
       <Filter>Source files\Device-specific files\Semihosting/Profiler</Filter>
-    </ClCompile>
-    <ClCompile Include="ExtraMemories.c">
-      <Filter>Source files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1451,6 +1448,9 @@
     <ClInclude Include="stm32f4xx_conf.h">
       <Filter>Header files</Filter>
     </ClInclude>
+    <ClInclude Include="ExtraMemories.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\SysprogsProfiler.h">
       <Filter>Header files\Device-specific files\Semihosting/Profiler</Filter>
     </ClInclude>
@@ -1465,9 +1465,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\CustomRealTimeWatches.h">
       <Filter>Header files\Device-specific files\Semihosting/Profiler</Filter>
-    </ClInclude>
-    <ClInclude Include="ExtraMemories.h">
-      <Filter>Header files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

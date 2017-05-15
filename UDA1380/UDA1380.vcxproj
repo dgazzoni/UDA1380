@@ -44,6 +44,7 @@
       <LibrarySearchDirectories>;%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
       <AdditionalLibraryNames>;%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
       <LinkerScript />
+      <ProduceRelocationRecords>true</ProduceRelocationRecords>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -101,7 +102,6 @@
     <ClCompile Include="ExtraMemories.c" />
     <ClCompile Include="FreeRTOS\croutine.c" />
     <ClCompile Include="FreeRTOS\event_groups.c" />
-    <ClCompile Include="FreeRTOS\heap_4.c" />
     <ClCompile Include="FreeRTOS\list.c" />
     <ClCompile Include="FreeRTOS\port.c" />
     <ClCompile Include="FreeRTOS\queue.c" />
