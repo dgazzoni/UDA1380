@@ -16,7 +16,7 @@ int16_t buf_in[QUEUE_LEN], buf_out[QUEUE_LEN];
 
 CCMRAM_BSS int16_t bufL[BLOCK_SIZE],bufR[BLOCK_SIZE];
 
-__RAMFUNC void processamento(void)
+void processamento(void)
 {
 	int cont;
 

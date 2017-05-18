@@ -821,7 +821,7 @@ static void UDA1380_task(void* pvParameters)
 }
 
 #ifdef BUTTON_PASSTHROUGH
-__RAMFUNC static void UDA1380_button_task(void* pvParameters)
+static void UDA1380_button_task(void* pvParameters)
 {
 	uint8_t dado[2];
 	while(1)
@@ -853,7 +853,7 @@ __RAMFUNC static void UDA1380_button_task(void* pvParameters)
 #endif
 
 #ifdef BUTTON_PASSTHROUGH
-__RAMFUNC void EXTI0_IRQHandler(void)
+void EXTI0_IRQHandler(void)
 {
 	if(EXTI_GetITStatus(EXTI_Line0) != RESET)
 	{
@@ -865,7 +865,7 @@ __RAMFUNC void EXTI0_IRQHandler(void)
 }
 #endif
 
-__RAMFUNC void DMA1_Stream0_IRQHandler(void)
+void DMA1_Stream0_IRQHandler(void)
 {
 
 #ifdef TEST_DMA1_STREAM0
@@ -918,7 +918,7 @@ __RAMFUNC void DMA1_Stream0_IRQHandler(void)
 
 }
 
-__RAMFUNC void DMA1_Stream4_IRQHandler(void)
+void DMA1_Stream4_IRQHandler(void)
 {
 
 #ifdef TEST_DMA1_STREAM4
@@ -1013,7 +1013,7 @@ inline float fixed_point_to_float(int16_t fix)
 	return res;
 }
 
-__RAMFUNC void UDA1380_ReceiveSamples(int16_t samples_L[], int16_t samples_R[], int num_samples)
+void UDA1380_ReceiveSamples(int16_t samples_L[], int16_t samples_R[], int num_samples)
 {
 	int i;
 	int16_t* vet;
@@ -1135,7 +1135,7 @@ __RAMFUNC void UDA1380_ReceiveSamples(int16_t samples_L[], int16_t samples_R[], 
 
 }
 
-__RAMFUNC void UDA1380_ReceiveSamplesMono(int16_t samples[], int num_samples)
+void UDA1380_ReceiveSamplesMono(int16_t samples[], int num_samples)
 {
 	int i;
 	int16_t* vet;
@@ -1258,7 +1258,7 @@ __RAMFUNC void UDA1380_ReceiveSamplesMono(int16_t samples[], int num_samples)
 
 }
 
-__RAMFUNC void UDA1380_ReceiveSamplesFloat(float samples_L[], float samples_R[], int num_samples)
+void UDA1380_ReceiveSamplesFloat(float samples_L[], float samples_R[], int num_samples)
 {
 	int i;
 	int16_t* vet;
@@ -1380,7 +1380,7 @@ __RAMFUNC void UDA1380_ReceiveSamplesFloat(float samples_L[], float samples_R[],
 
 }
 
-__RAMFUNC void UDA1380_ReceiveSamplesFloatMono(float samples[], int num_samples)
+void UDA1380_ReceiveSamplesFloatMono(float samples[], int num_samples)
 {
 	int i;
 	int16_t* vet;
@@ -1502,7 +1502,7 @@ __RAMFUNC void UDA1380_ReceiveSamplesFloatMono(float samples[], int num_samples)
 
 }
 
-__RAMFUNC void UDA1380_SendSamples(const int16_t samples_L[], const int16_t samples_R[], int num_samples)
+void UDA1380_SendSamples(const int16_t samples_L[], const int16_t samples_R[], int num_samples)
 {
 	int i;
 	int16_t* vet;
@@ -1631,7 +1631,7 @@ __RAMFUNC void UDA1380_SendSamples(const int16_t samples_L[], const int16_t samp
 
 }
 
-__RAMFUNC void UDA1380_SendSamplesMono(const int16_t samples[], int num_samples)
+void UDA1380_SendSamplesMono(const int16_t samples[], int num_samples)
 {
 	int i;
 	int16_t* vet;
@@ -1760,7 +1760,7 @@ __RAMFUNC void UDA1380_SendSamplesMono(const int16_t samples[], int num_samples)
 
 }
 
-__RAMFUNC void UDA1380_SendSamplesFloat(const float samples_L[], const float samples_R[], int num_samples)
+void UDA1380_SendSamplesFloat(const float samples_L[], const float samples_R[], int num_samples)
 {
 	int i;
 	int16_t* vet;
@@ -1889,7 +1889,7 @@ __RAMFUNC void UDA1380_SendSamplesFloat(const float samples_L[], const float sam
 
 }
 
-__RAMFUNC void UDA1380_SendSamplesFloatMono(const float samples[], int num_samples)
+void UDA1380_SendSamplesFloatMono(const float samples[], int num_samples)
 {
 	int i;
 	int16_t* vet;

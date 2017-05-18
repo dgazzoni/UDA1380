@@ -3,7 +3,6 @@
 
 #include "stm32f4xx.h"
 
-#define __RAMFUNC __attribute__((section(".data.ram_func")))
 #define UDA1380_CCMRAM_BSS CCMRAM_BSS
 #define UDA1380_CCMRAM_DATA CCMRAM_DATA
 
