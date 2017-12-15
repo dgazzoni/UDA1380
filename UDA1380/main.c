@@ -2,6 +2,7 @@
 #include "uda1380.h"
 #include "arm_math.h"
 #include "ExtraMemories.h"
+#include "dsp.h"
 
 // Os parametros abaixo estao nos valores tipicos para otimizar
 // tempo de processamento e tolerar processamentos mais longos
@@ -14,17 +15,15 @@
 
 int16_t buf_in[QUEUE_LEN], buf_out[QUEUE_LEN];
 
-CCMRAM_BSS int16_t bufL[BLOCK_SIZE],bufR[BLOCK_SIZE];
+CCMRAM_BSS float bufL[BLOCK_SIZE], bufR[BLOCK_SIZE];
 
 void processamento(void)
 {
-	int cont;
-
 	while(1)
 	{
-		UDA1380_ReceiveSamples(bufL, bufR, BLOCK_SIZE);
-
-		UDA1380_SendSamples(bufL, bufR, BLOCK_SIZE);
+		UDA1380_ReceiveSamplesFloat(bufL, bufR, BLOCK_SIZE);
+		
+		UDA1380_SendSamplesFloat(bufL, bufR, BLOCK_SIZE);
 	}
 }
 

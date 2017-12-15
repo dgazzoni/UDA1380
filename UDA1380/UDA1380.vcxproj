@@ -12,6 +12,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{32F1B77E-63B6-4691-AE8E-377ADEEE6F28}</ProjectGuid>
+    <BSP_ID>com.visualgdb.bsp.in-place</BSP_ID>
+    <BSP_VERSION>1.0</BSP_VERSION>
+    <InPlaceBSPSubdir>BSP</InPlaceBSPSubdir>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
@@ -29,9 +32,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
     <GNUConfigurationType>Debug</GNUConfigurationType>
     <Toolchain>c:\SysGCC\arm-eabi</Toolchain>
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
     <Toolchain>c:\SysGCC\arm-eabi</Toolchain>
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion />
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
     <ClCompile>
@@ -48,53 +55,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\FastSemihosting.cpp" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\InstrumentingProfiler.cpp" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\ProfilerRTOS_FreeRTOS.c" />
-    <ClCompile Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\SamplingProfiler.cpp" />
-    <ClCompile Include="BSP\STM32F4xxxx\StartupFiles\startup_stm32f407xx.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\misc.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_adc.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_can.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cec.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_crc.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_aes.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_des.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_tdes.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dac.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dbgmcu.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dcmi.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dfsdm.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma2d.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dsi.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash_ramfunc.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fmpi2c.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_md5.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_sha1.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_i2c.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_iwdg.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_lptim.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_ltdc.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_pwr.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_qspi.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rng.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rtc.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sai.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sdio.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spdifrx.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c" />
-    <ClCompile Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.c" />
     <ClCompile Include="CPAL\cpal_hal.c" />
     <ClCompile Include="CPAL\cpal_i2c.c" />
     <ClCompile Include="CPAL\cpal_i2c_hal_stm32f4xx.c" />
@@ -111,6 +71,23 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">Og</Optimization>
     </ClCompile>
     <ClCompile Include="system_stm32f4xx.c" />
+    <ClCompile Include="UDA1380\dsp.c" />
+    <ClCompile Include="UDA1380\dsp_analog_filter.c" />
+    <ClCompile Include="UDA1380\dsp_biquad_filter.c" />
+    <ClCompile Include="UDA1380\dsp_colored_noise.c" />
+    <ClCompile Include="UDA1380\dsp_delay.c" />
+    <ClCompile Include="UDA1380\dsp_fractional_delay.c" />
+    <ClCompile Include="UDA1380\dsp_median_filter.c" />
+    <ClCompile Include="UDA1380\dsp_moving_average.c" />
+    <ClCompile Include="UDA1380\dsp_nco.c" />
+    <ClCompile Include="UDA1380\dsp_notch_peak_filter.c" />
+    <ClCompile Include="UDA1380\dsp_peak_finder.c" />
+    <ClCompile Include="UDA1380\dsp_pll.c" />
+    <ClCompile Include="UDA1380\dsp_signal_source.c" />
+    <ClCompile Include="UDA1380\dsp_sine_wave.c" />
+    <ClCompile Include="UDA1380\dsp_triangle_wave.c" />
+    <ClCompile Include="UDA1380\dsp_variable_integer_delay.c" />
+    <ClCompile Include="UDA1380\dsp_window.c" />
     <ClCompile Include="UDA1380\uda1380.c" />
     <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_abs_f32.c" />
     <ClCompile Include="CMSIS_DSP\BasicMathFunctions\arm_abs_q15.c" />
@@ -383,6 +360,112 @@
     <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_rfft_init_q31.c" />
     <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_rfft_q15.c" />
     <ClCompile Include="CMSIS_DSP\TransformFunctions\arm_rfft_q31.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\StartupFiles\startup_stm32f407xx.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\misc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_adc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_can.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cec.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_crc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_aes.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_des.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_tdes.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dac.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dbgmcu.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dcmi.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dfsdm.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma2d.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dsi.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash_ramfunc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fmpi2c.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_md5.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_sha1.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_i2c.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_iwdg.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_lptim.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_ltdc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_pwr.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_qspi.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rng.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rtc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sai.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sdio.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spdifrx.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.c" />
+    <ClCompile Include="$(EFP_BASE)\Profiler\FastSemihosting.cpp" />
+    <ClCompile Include="$(EFP_BASE)\Profiler\SamplingProfiler.cpp" />
+    <ClCompile Include="$(EFP_BASE)\Profiler\InstrumentingProfiler.cpp" />
+    <ClCompile Include="$(EFP_BASE)\Profiler\ProfilerRTOS_FreeRTOS.c" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\misc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cec.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dfsdm.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma2d.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dsi.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash_ramfunc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fmc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fmpi2c.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_lptim.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_ltdc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_qspi.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sai.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spdifrx.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_StdPeriph\Device\ST\STM32F4xx\Include\stm32f4xx.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_StdPeriph\Device\ST\STM32F4xx\Include\system_stm32f4xx.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_StdPeriph\Include\arm_common_tables.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_StdPeriph\Include\arm_const_structs.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_StdPeriph\Include\arm_math.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm0.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm0plus.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm3.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm4.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm7.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cmFunc.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cmInstr.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cmSimd.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_StdPeriph\Include\core_sc000.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_StdPeriph\Include\core_sc300.h" />
+    <ClInclude Include="$(BSP_ROOT)\STM32F4xxxx\CMSIS_StdPeriph\RTOS\Template\cmsis_os.h" />
+    <ClInclude Include="$(EFP_BASE)\Profiler\SysprogsProfiler.h" />
+    <ClInclude Include="$(EFP_BASE)\Profiler\SmallNumberCoder.h" />
+    <ClInclude Include="$(EFP_BASE)\Profiler\SysprogsProfilerInterface.h" />
+    <ClInclude Include="$(EFP_BASE)\Profiler\ProfilerFreeRTOSHooks.h" />
+    <ClInclude Include="$(EFP_BASE)\Profiler\CustomRealTimeWatches.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="stm32.props" />
@@ -390,65 +473,6 @@
     <None Include="UDA1380-Release.vgdbsettings" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\CustomRealTimeWatches.h" />
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\ProfilerFreeRTOSHooks.h" />
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\SmallNumberCoder.h" />
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\SysprogsProfiler.h" />
-    <ClInclude Include="..\..\..\..\AppData\Local\VisualGDB\EmbeddedEFPs\Profiler\SysprogsProfilerInterface.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Device\ST\STM32F4xx\Include\stm32f4xx.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Device\ST\STM32F4xx\Include\system_stm32f4xx.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\arm_common_tables.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\arm_const_structs.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\arm_math.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm0.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm0plus.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm3.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm4.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cm7.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cmFunc.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cmInstr.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_cmSimd.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_sc000.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\Include\core_sc300.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\CMSIS_StdPeriph\RTOS\Template\cmsis_os.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\misc.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cec.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dfsdm.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma2d.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dsi.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash_ramfunc.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fmc.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fmpi2c.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_lptim.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_ltdc.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_qspi.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sai.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spdifrx.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h" />
-    <ClInclude Include="BSP\STM32F4xxxx\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h" />
     <ClInclude Include="CPAL\include\cpal.h" />
     <ClInclude Include="CPAL\include\cpal_conf.h" />
     <ClInclude Include="CPAL\include\cpal_i2c.h" />
@@ -471,6 +495,39 @@
     <ClInclude Include="FreeRTOS\include\task.h" />
     <ClInclude Include="FreeRTOS\include\timers.h" />
     <ClInclude Include="stm32f4xx_conf.h" />
+    <ClInclude Include="UDA1380\dsp.h" />
+    <ClInclude Include="UDA1380\dsp_analog_filter.h" />
+    <ClInclude Include="UDA1380\dsp_analog_filter_params.h" />
+    <ClInclude Include="UDA1380\dsp_biquad_filter.h" />
+    <ClInclude Include="UDA1380\dsp_biquad_filter_params.h" />
+    <ClInclude Include="UDA1380\dsp_colored_noise.h" />
+    <ClInclude Include="UDA1380\dsp_colored_noise_params.h" />
+    <ClInclude Include="UDA1380\dsp_delay.h" />
+    <ClInclude Include="UDA1380\dsp_delay_params.h" />
+    <ClInclude Include="UDA1380\dsp_fractional_delay.h" />
+    <ClInclude Include="UDA1380\dsp_fractional_delay_params.h" />
+    <ClInclude Include="UDA1380\dsp_median_filter.h" />
+    <ClInclude Include="UDA1380\dsp_median_filter_params.h" />
+    <ClInclude Include="UDA1380\dsp_moving_average.h" />
+    <ClInclude Include="UDA1380\dsp_moving_average_params.h" />
+    <ClInclude Include="UDA1380\dsp_nco.h" />
+    <ClInclude Include="UDA1380\dsp_nco_params.h" />
+    <ClInclude Include="UDA1380\dsp_notch_peak_filter.h" />
+    <ClInclude Include="UDA1380\dsp_notch_peak_filter_params.h" />
+    <ClInclude Include="UDA1380\dsp_peak_finder.h" />
+    <ClInclude Include="UDA1380\dsp_peak_finder_params.h" />
+    <ClInclude Include="UDA1380\dsp_pll.h" />
+    <ClInclude Include="UDA1380\dsp_pll_params.h" />
+    <ClInclude Include="UDA1380\dsp_signal_source.h" />
+    <ClInclude Include="UDA1380\dsp_signal_source_params.h" />
+    <ClInclude Include="UDA1380\dsp_sine_wave.h" />
+    <ClInclude Include="UDA1380\dsp_sine_wave_params.h" />
+    <ClInclude Include="UDA1380\dsp_triangle_wave.h" />
+    <ClInclude Include="UDA1380\dsp_triangle_wave_params.h" />
+    <ClInclude Include="UDA1380\dsp_variable_integer_delay.h" />
+    <ClInclude Include="UDA1380\dsp_variable_integer_delay_params.h" />
+    <ClInclude Include="UDA1380\dsp_window.h" />
+    <ClInclude Include="UDA1380\dsp_window_params.h" />
     <ClInclude Include="UDA1380\uda1380.h" />
   </ItemGroup>
   <ItemGroup>

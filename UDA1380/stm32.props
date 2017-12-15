@@ -6,16 +6,10 @@
 	Use VisualGDB Project Properties dialog or modify Makefile or per-configuration .mak files instead.
 -->
 
-<!-- VisualGDB provides BSP_ROOT and TOOLCHAIN_ROOT via environment when running Make. The line below will only be active if GNU Make is started manually. -->
-	<PropertyGroup>
-		<BSP_ROOT Condition="'$(BSP_ROOT)' == ''">BSP</BSP_ROOT>
-		<EFP_BASE Condition="'$(EFP_BASE)' == ''">$(LOCALAPPDATA)/VisualGDB/EmbeddedEFPs</EFP_BASE>
-		<TESTFW_BASE Condition="'$(TESTFW_BASE)' == ''">$(LOCALAPPDATA)/VisualGDB/TestFrameworks</TESTFW_BASE>
-		<TOOLCHAIN_ROOT Condition="'$(TOOLCHAIN_ROOT)' == ''">c:/SysGCC/arm-eabi</TOOLCHAIN_ROOT>
-	</PropertyGroup>
+<!-- In order to build this project manually (outside VisualGDB), please provide TOOLCHAIN_ROOT, BSP_ROOT, EFP_BASE and TESTFW_BASE variables via Environment or Make command line -->
 	<ItemDefinitionGroup>
 		<ClCompile>
-			<PreprocessorDefinitions>ARM_MATH_CM4;STM32F407VG;flash_layout;STM32F40_41xxx;STM32F4XX;USE_STDPERIPH_DRIVER;__FPU_PRESENT;USE_FREERTOS;HSE_VALUE=8000000;DEBUG_DEFAULT_INTERRUPT_HANDLERS;FAST_SEMIHOSTING_BUFFER_SIZE=256;FAST_SEMIHOSTING_BLOCKING_MODE=1;FAST_SEMIHOSTING_STDIO_DRIVER=1;FAST_SEMIHOSTING_PROFILER_DRIVER=1;PROFILER_STM32F4;;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+			<PreprocessorDefinitions>ARM_MATH_CM4;STM32F407VG;flash_layout;STM32F40_41xxx;STM32F4XX;USE_STDPERIPH_DRIVER;__FPU_PRESENT;USE_FREERTOS;HSE_VALUE=8000000;DEBUG_DEFAULT_INTERRUPT_HANDLERS;FAST_SEMIHOSTING_BUFFER_SIZE=256;FAST_SEMIHOSTING_BLOCKING_MODE=1;FAST_SEMIHOSTING_STDIO_DRIVER=1;FAST_SEMIHOSTING_PROFILER_DRIVER=1;PROFILER_STM32F4;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
 			<AdditionalIncludeDirectories>$(ProjectDir);BSP/STM32F4xxxx/STM32F4xx_StdPeriph_Driver/inc;BSP/STM32F4xxxx/CMSIS_StdPeriph/Device/ST/STM32F4xx/Include;BSP/STM32F4xxxx/CMSIS_StdPeriph/Include;BSP/STM32F4xxxx/CMSIS_StdPeriph/RTOS/Template;CPAL/include;FreeRTOS/include;UDA1380;$(EFP_BASE)/Profiler;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
 			<ForcedIncludeFiles>$(EFP_BASE)/Profiler/ProfilerFreeRTOSHooks.h;%(ClCompile.ForcedIncludeFiles)</ForcedIncludeFiles>
 			<AdditionalOptions>-mthumb-interwork %(ClCompile.AdditionalOptions)</AdditionalOptions>

@@ -3,7 +3,7 @@
   <Memories>
     <MemoryUtilization>
       <MemoryName>FLASH</MemoryName>
-      <Used>26836</Used>
+      <Used>26840</Used>
       <Total>1048576</Total>
     </MemoryUtilization>
     <MemoryUtilization>
@@ -13,7 +13,7 @@
     </MemoryUtilization>
     <MemoryUtilization>
       <MemoryName>CCMRAM</MemoryName>
-      <Used>11488</Used>
+      <Used>11744</Used>
       <Total>65536</Total>
     </MemoryUtilization>
   </Memories>
