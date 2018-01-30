@@ -30,6 +30,13 @@ bool dsp_notch_peak_filter_init(dsp_t* dsp)
 
 
 	}
+	/*Coeficientes são passados à estrutura -- funcionamento igual ao de um filtro biquad de um estágio*/
+	else if (dsp->function_params->notch_peak_filter->specification == DSP_NOTCH_PEAK_FILTER_SPECIFICATION_COEFFICIENTS) { 
+		
+		arm_biquad_cascade_df1_initf32( &(dsp->function_params->notch_peak_filter->S) , 1 , dsp->function_params->notch_peak_filter->coeffs , dsp->function_params->notch_peak_filter->state);
+		return true;
+		
+	}
 
 
 	/*  Calcular os parametros do filtro */
@@ -66,7 +73,7 @@ bool dsp_notch_peak_filter_init(dsp_t* dsp)
 	/* Inicalizar Estrutura */
 
 
-		arm_biquad_cascade_df1_initf32(dsp->function_params->notch_peak_filter->S , 1 , dsp->function_params->notch_peak_filter->coeffs , dps->function_params->notch_peak_filter->state);
+		arm_biquad_cascade_df1_initf32(&(dsp->function_params->notch_peak_filter->S) , 1 , dsp->function_params->notch_peak_filter->coeffs , dsp->function_params->notch_peak_filter->state);
 
 
 }
@@ -75,6 +82,6 @@ bool dsp_notch_peak_filter_step(dsp_t* dsp, const float in[], float out[], void*
 {
 
 
-	arm_biquad_cascade_fd1_f32(dsp->function_params->notch_peak_filter->S , in , out , dsp->common_params->block_size);
+	arm_biquad_cascade_fd1_f32(&(dsp->function_params->notch_peak_filter->S) , in , out , dsp->common_params->block_size);
 	
 }
